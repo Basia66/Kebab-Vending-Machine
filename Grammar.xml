@@ -1,0 +1,18 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+  <rule id="rootRule">
+    <ruleref uri="#operation"/>
+    <tag>out.operation=rules.latest();</tag>
+  </rule>
+
+  <rule id="operation">
+    <one-of>
+      <item>
+        dalej <tag> out="dalej";</tag>
+      </item>
+      <item>
+        koniec <tag> out="koniec";</tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>
